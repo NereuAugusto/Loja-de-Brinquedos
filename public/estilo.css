@@ -1,3 +1,23 @@
 body {
+    font-family: 'Raleway', sans-serif;
+}
 
+.frete {
+    background-color: #FFF8D6;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    font-weight:500;
+}
+
+img {
+    max-width: 100%;
+}
+
+.corlaranja{
+    color: #f67551;
+}
+
+.titulo{
+    font-weight:800;
 }
