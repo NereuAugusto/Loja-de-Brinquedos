@@ -10,6 +10,10 @@ body {
     font-weight:500;
 }
 
+.margem{
+    margin: 0 0 0 10px;
+}
+
 img {
     max-width: 100%;
 }
@@ -19,6 +23,7 @@ img {
 }
 
 .titulo{
+    text-align: left;
     font-weight:800;
 }
 
