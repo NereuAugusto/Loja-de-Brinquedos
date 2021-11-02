@@ -12,13 +12,15 @@ class IndexRoute {
 		res.render("index/index", opcoes);
 	}
 
-	public async contato(req: app.Request, res: app.Response) {
-		res.render("index/contato");
+	public async login(req: app.Request, res: app.Response) {
+		res.render("index/login");
 	}
 
 	public async servico(req: app.Request, res: app.Response) {
 		res.render("index/servico");
 	}
+
+	
 
 	public async produtos(req: app.Request, res: app.Response) {
 		let produtoA = {
