@@ -82,7 +82,7 @@ header{
 .fim3{
     font-size: 10px;
     padding: 2px 0;
-    color: white;
+    color: black;
     
 }
 
@@ -189,7 +189,7 @@ header{
     }
 
     #navbar.active{
-        height: calc(100vh - 124.8px);
+        height: calc(100vh - 101px);
         bottom: 0;
         width: 100%;
     }
