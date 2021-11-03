@@ -12,8 +12,8 @@ class IndexRoute {
 		res.render("index/index", opcoes);
 	}
 
-	public async login(req: app.Request, res: app.Response) {
-		res.render("index/login");
+	public async cadastro(req: app.Request, res: app.Response) {
+		res.render("index/cadastro");
 	}
 
 	public async servico(req: app.Request, res: app.Response) {
