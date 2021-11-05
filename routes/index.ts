@@ -4,9 +4,14 @@ class IndexRoute {
 	public async index(req: app.Request, res: app.Response) {
 		let nomeDoUsuarioQueVeioDoBanco = "Rafael";
 
+		let lista: any[];
+
+		await app.sql.connect(async (sql) => {
+			lista = await sql.query("select id, nome, descricao, preco from produto order by preco asc limit 10");
+		});
+
 		let opcoes = {
-			usuario: nomeDoUsuarioQueVeioDoBanco,
-			quantidadeDeRepeticoes: 5
+			produtos: lista
 		};
 
 		res.render("index/index", opcoes);
