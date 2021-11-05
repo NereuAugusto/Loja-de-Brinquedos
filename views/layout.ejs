@@ -56,12 +56,14 @@
 
 		document.onclick = function(e){
 			if(e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar'){
+				document.body.classList.remove('ocultar-conteudo');
 				toggle.classList.remove('active');
 				navbar.classList.remove('active');
 			}
 		}
 
 		toggle.onclick = function(){
+			document.body.classList.toggle('ocultar-conteudo');
 			toggle.classList.toggle('active');
 			navbar.classList.toggle('active');
 		}

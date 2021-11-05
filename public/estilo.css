@@ -2,6 +2,10 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+.ocultar-conteudo {
+    overflow: hidden;
+}
+
 .frete {
     background-color: #FFF8D6;
     text-align: center;
@@ -41,6 +45,8 @@ header{
    background: #fff;
    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
    z-index: 1000;
+   min-height: 60px;
+   padding-right: 60px;
 }
 
 .corpo{
