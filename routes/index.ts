@@ -7,7 +7,7 @@ class IndexRoute {
 		let lista: any[];
 
 		await app.sql.connect(async (sql) => {
-			lista = await sql.query("select id, nome, descricao, preco from produto order by preco asc limit 10");
+			lista = await sql.query("select id, nome, descricao, preco from produto order by preco asc limit 12");
 		});
 
 		let opcoes = {

@@ -98,6 +98,10 @@ header{
     
 }
 
+.altmin{
+    min-height: 180px;
+}
+
 .corfinal {
     background-color: #FFF8D6;
 }

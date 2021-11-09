@@ -32,7 +32,7 @@
 				<div class="col-sm-2 text-center">
 					<div class="fundo-coluna">
 						<img src="/public/img/BARBIE.png"
-							width="100">
+							width="200">
 						<h5>Barbies</h5>
 					</div>
 				</div>
@@ -40,7 +40,7 @@
 				<div class="col-sm-2 text-center">
 					<div class="fundo-coluna">
 						<img src="/public/img/BOBESPONJA.png"
-							width="100">
+							width="200">
 						<h5>Bob Esponja</h5>
 					</div>
 				</div>
@@ -48,7 +48,7 @@
 				<div class="col-sm-2 text-center">
 					<div class="fundo-coluna">
 						<img src="/public/img/BOLA.png"
-							width="100">
+							width="200">
 						<h5>Bolas</h5>
 					</div>
 				</div>
@@ -56,7 +56,7 @@
 				<div class="col-sm-2 text-center">
 					<div class="fundo-coluna">
 						<img src="/public/img/URSO.png"
-							width="100">
+							width="200">
 						<h5>Pelúcias</h5>
 					</div>
 				</div>
@@ -64,7 +64,7 @@
 				<div class="col-sm-2 text-center">
 					<div class="fundo-coluna">
 						<img src="/public/img/PIXAR.png"
-							width="100">
+							width="200">
 						<h5>Pixar</h5>
 					</div>
 				</div>
@@ -72,7 +72,7 @@
 				<div class="col-sm-2 text-center">
 					<div class="fundo-coluna">
 						<img src="/public/img/MONOPOLY.png"
-							width="100">
+							width="200">
 						<h5>Jogos de tabuleiro</h5>
 					</div>
 				</div>
@@ -85,10 +85,12 @@
 				<% for (let i = 0; i < produtos.length; i++) { %>
 				<div class="col-sm-2 text-center">
 					<div class="fundo-coluna">
-						<h1>
-							<%= produtos[i].nome %>
-						</h1>
+						<div class="altmin">
 						<img src="/public/img/brinquedo<%= produtos[i].id %>.jpeg" width="400">
+						</div>
+						<p>
+							<%= produtos[i].nome %>
+						</p>
 					</div>
 				</div>
 				<% } %>
@@ -96,6 +98,28 @@
 		</div>
 
 
+		<div class="paddingfds">
+			<h3 class="topico">Nossos clientes</h3>
+			<div class="row">
+				<div class="col-sm-4 text-center">
+					<div class="fundo-coluna">
+						<img src="/public/img/2.png" width="400">
+					</div>
+				</div>
+
+				<div class="col-sm-4 text-center">
+					<div class="fundo-coluna">
+						<img src="/public/img/3.png" width="400">
+					</div>
+				</div>
+
+				<div class="col-sm-4 text-center">
+					<div class="fundo-coluna">
+						<img src="/public/img/1.png" width="400">
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 

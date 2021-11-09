@@ -1,21 +1,39 @@
-<h1>Sou a página de produtos!</h1>
+<div class="container-fluid">
+	
+	<h1>Sou a página de produtos!</h1>
 
-<p>Listagem de produtos (<%= produtos.length %> produtos no total)</p>
+	<p>Listagem de produtos (<%= produtos.length %> produtos no total)</p>
 
-<% for (let contador = 0; contador < produtos.length; contador++) { %>
+	<div class="row">
+		<% for (let i = 0; i < produtos.length; i++) { %>
+		<div class="col-sm-2 text-center">
+			<div class="fundo-coluna">
+				<div class="altmin">
+				<img src="/public/img/brinquedo<%= produtos[i].id %>.jpeg" width="400">
+				</div>
+				<p>
+					<%= produtos[i].nome %>
+				</p>
+			</div>
+		</div>
+		<% } %>
+	</div>
 
-	<h2>
-		<%= produtos[contador].nome %>
-	</h2>
+	<% for (let contador = 0; contador < produtos.length; contador++) { %>
 
-	<p>
-		Id: <%= produtos[contador].id %>
-	</p>
+		<h2>
+			<%= produtos[contador].nome %>
+		</h2>
 
-	<p>
-		Valor: R$ <%= produtos[contador].valor %>
-	</p>
+		<p>
+			Id: <%= produtos[contador].id %>
+		</p>
 
-	<hr />
+		<p>
+			Valor: R$ <%= produtos[contador].valor %>
+		</p>
 
-<% } %>
+		<hr />
+
+	<% } %>
+</div>
