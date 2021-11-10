@@ -27,12 +27,12 @@
 			</button>
 		</div>
 
-		<div class="paddingfds">
+		<div class="paddingfds cor">
 			<div class="row">
 				<div class="col-sm-2 text-center">
 					<div class="fundo-coluna">
 						<img src="/public/img/BARBIE.png"
-							width="200">
+							width="300">
 						<h5>Barbies</h5>
 					</div>
 				</div>
@@ -40,7 +40,7 @@
 				<div class="col-sm-2 text-center">
 					<div class="fundo-coluna">
 						<img src="/public/img/BOBESPONJA.png"
-							width="200">
+							width="300">
 						<h5>Bob Esponja</h5>
 					</div>
 				</div>
@@ -48,7 +48,7 @@
 				<div class="col-sm-2 text-center">
 					<div class="fundo-coluna">
 						<img src="/public/img/BOLA.png"
-							width="200">
+							width="300">
 						<h5>Bolas</h5>
 					</div>
 				</div>
@@ -56,7 +56,7 @@
 				<div class="col-sm-2 text-center">
 					<div class="fundo-coluna">
 						<img src="/public/img/URSO.png"
-							width="200">
+							width="300">
 						<h5>Pelúcias</h5>
 					</div>
 				</div>
@@ -64,7 +64,7 @@
 				<div class="col-sm-2 text-center">
 					<div class="fundo-coluna">
 						<img src="/public/img/PIXAR.png"
-							width="200">
+							width="300">
 						<h5>Pixar</h5>
 					</div>
 				</div>
@@ -72,7 +72,7 @@
 				<div class="col-sm-2 text-center">
 					<div class="fundo-coluna">
 						<img src="/public/img/MONOPOLY.png"
-							width="200">
+							width="300">
 						<h5>Jogos de tabuleiro</h5>
 					</div>
 				</div>
@@ -99,8 +99,8 @@
 			<h3 class="topico">Os mais vendidos</h3>
 			<div class="row">
 				<% for (let i = 0; i < produtos.length; i++) { %>
-				<div class="col-sm-2 text-center">
-					<div class="fundo-coluna">
+				<div class="col-sm-4 col-md-3 col-lg-2 text-center">
+					<div class="fundo-coluna" style="cursor: pointer;" onclick="mostrarProduto(<%= i %>)">
 						<div class="altmin">
 						<img src="/public/img/brinquedo<%= produtos[i].id %>.jpeg" width="400">
 						</div>
@@ -141,3 +141,5 @@
 
 
 </div>
+
+<%- include("modal-produto") %>

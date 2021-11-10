@@ -7,7 +7,7 @@
 	<div class="row">
 		<% for (let i = 0; i < produtos.length; i++) { %>
 		<div class="col-sm-2 text-center">
-			<div class="fundo-coluna">
+			<div class="fundo-coluna" style="cursor: pointer;" onclick="mostrarProduto(<%= i %>)">
 				<div class="altmin">
 				<img src="/public/img/brinquedo<%= produtos[i].id %>.jpeg" width="400">
 				</div>
@@ -18,22 +18,6 @@
 		</div>
 		<% } %>
 	</div>
-
-	<% for (let contador = 0; contador < produtos.length; contador++) { %>
-
-		<h2>
-			<%= produtos[contador].nome %>
-		</h2>
-
-		<p>
-			Id: <%= produtos[contador].id %>
-		</p>
-
-		<p>
-			Valor: R$ <%= produtos[contador].valor %>
-		</p>
-
-		<hr />
-
-	<% } %>
 </div>
+
+<%- include("modal-produto") %>
