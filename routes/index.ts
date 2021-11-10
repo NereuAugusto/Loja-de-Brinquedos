@@ -21,11 +21,6 @@ class IndexRoute {
 		res.render("index/cadastro");
 	}
 
-	public async servico(req: app.Request, res: app.Response) {
-		res.render("index/servico");
-	}
-
-	
 
 	public async produtos(req: app.Request, res: app.Response) {
 		let produtoA = {
