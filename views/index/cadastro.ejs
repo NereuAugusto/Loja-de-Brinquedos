@@ -30,18 +30,19 @@
 
 	async function criarProduto() {
 		if (!nome.value) {
-			alert("O nome é obrigatório");
+			Swal.fire("Erro!", "O nome é obrigatório!", "error");
 			return;
 		}
 
-        let p = parseFloat(preco.value);
-        if (isNaN(p) || p <= 0) {
-			alert("O preço é obrigatório");
-			return;
-		}
 
 		if (!descricao.value) {
-			alert("A descricao é obrigatório");
+			Swal.fire("Erro!", "A descrição é obrigatória!", "error");
+			return;
+		}
+
+		let p = parseFloat(preco.value);
+        if (isNaN(p) || p <= 0) {
+			Swal.fire("Erro!", "O preço é obrigatório!", "error");
 			return;
 		}
 
@@ -68,12 +69,12 @@
 				descricao.value = "";
                 preco.value = "";
 
-				alert("Produto criado com sucesso!");
+				Swal.fire("Sucesso!", "Produto criado com sucesso!", "success");
 			} else {
-				alert("Erro ao criar o produto!");
+				Swal.fire("Erro!", "Erro ao criar o produto!", "error");
 			}
 		} catch (ex) {
-			alert("Erro de rede: " + ex.message);
+			Swal.fire("Erro!", "Erro de rede: " + ex.message, "error");
 		}
 	}
 
