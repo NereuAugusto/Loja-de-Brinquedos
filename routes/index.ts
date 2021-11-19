@@ -19,6 +19,7 @@ class IndexRoute {
 		res.render("index/cadastro");
 	}
 
+	@app.route.formData()
 	@app.http.post()
 	public async criarProduto(req: app.Request, res: app.Response) {
 		// Os dados enviados via POST ficam dentro de req.body
@@ -51,13 +52,32 @@ class IndexRoute {
 			return;
 		}
 
+		if (!req.uploadedFiles || !req.uploadedFiles.imagem) {
+			res.status(400);
+			res.json("Imagem inválida");
+			return;
+		}
+
+		if (req.uploadedFiles.imagem.size > (1024 * 1024)) {
+			res.status(400);
+			res.json("Imagem muito grande");
+			return;
+		}
+
 		await app.sql.connect(async (sql) => {
 
 			// Todas os comandos SQL devem ser executados aqui dentro do app.sql.connect().
 
+			await sql.beginTransaction();
+
 			// As interrogações serão substituídas pelos valores passados ao final, na ordem passada.
 			await sql.query("INSERT INTO produto (nome, descricao, preco) VALUES (?, ?, ?)", [produto.nome, produto.descricao, produto.preco]);
 
+			const id: number = await sql.scalar("SELECT last_insert_id()");
+
+			app.fileSystem.saveUploadedFile("public/img/produtos/brinquedo" + id + ".jpeg", req.uploadedFiles.imagem);
+
+			await sql.commit();
 		});
 
 		res.json(true);

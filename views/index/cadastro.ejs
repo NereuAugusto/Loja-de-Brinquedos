@@ -1,4 +1,4 @@
-<div class="espacocentro">
+<form class="espacocentro" id="formProduto">
 	<h1 class="cadastro">Cadastro<img src="/public/img/4.png" width="300"></h1>
 	<div class="form-group">
 		<label for="nome">Nome do produto</label>
@@ -10,22 +10,28 @@
 		<input class="form-control" type="text" id="descricao" name="descricao" maxlength="100" />
 	</div>
 
-
 	<div class="form-group">
 		<label for="preco">Preço do produto</label>
-		<input class="form-control" type="number" id="preco" name="preco" maxlength="10" />
+		<input class="form-control" type="number" id="preco" name="preco" min="0" max="9999" />
+	</div>
+
+	<div class="form-group">
+		<label for="imagem">Imagem do produto</label>
+		<input class="form-control" type="file" id="imagem" name="imagem" accept="image/*" />
 	</div>
 
 	<div class="form-group botao">
 		<button class="btn" type="button" id="buttonCriar">Criar produto</button>
 	</div>
-</div>
+</form>
 
 <script type="text/javascript">
 
+	let formProduto = document.getElementById("formProduto");
 	let nome = document.getElementById("nome");
 	let descricao = document.getElementById("descricao");
     let preco = document.getElementById("preco");
+    let imagem = document.getElementById("imagem");
 	let buttonCriar = document.getElementById("buttonCriar");
 
 	async function criarProduto() {
@@ -34,9 +40,13 @@
 			return;
 		}
 
-
 		if (!descricao.value) {
 			Swal.fire("Erro!", "A descrição é obrigatória!", "error");
+			return;
+		}
+
+		if (!imagem.value) {
+			Swal.fire("Erro!", "A imagem é obrigatória!", "error");
 			return;
 		}
 
@@ -46,19 +56,9 @@
 			return;
 		}
 
-		// Cria um objeto com os valores que serão enviados para o servidor.
-		let dadosParaEnvio = {
-			nome: nome.value,
-			descricao: descricao.value,
-            preco: p
-		};
-
 		let opcoes = {
 			method: "POST",
-			headers: {
-				"Content-Type": "application/json"
-		    },
-		    body: JSON.stringify(dadosParaEnvio)
+		    body: new FormData(formProduto)
 		};
 
 		try {
