@@ -138,7 +138,6 @@ header{
 }
 
 .espacom{
-    padding: 50px;
     max-width: 1300px;
 }
 
@@ -468,9 +467,10 @@ header{
 .time{
     color: #f7226a;
     text-transform: uppercase;
-    width: 90%;
     display: flex;
     justify-content: center;
+    position: relative;
+    max-width: 100%;
 }
 
 .middle{
@@ -478,7 +478,7 @@ header{
 }
 
 .time span{
-    padding: 0 14px;
+    padding: 0 8px;
     font-size: 10px;
     font-weight: 600;
 }
