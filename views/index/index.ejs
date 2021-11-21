@@ -1,4 +1,23 @@
-﻿<div>
+﻿<div class="pag1">
+	<div class = "container-fluid espacom">
+		<div class = "row">	
+			<div class = "col-sm-6">
+				<p class="corlaranja"><i>ABOUT US</i></p>
+				<hr class="linha"/>
+				<h2 class="titulom">Os melhores  brinquedos,<br/> sempre!</h2>
+				<p class="pm">Nós da recanto trabalhamos com as melhores distribuidoras de brinquedos do país, sempre trazendo as tendências mundiais na diversão e no entretenimento das nossas tão amadas crianças. 
+					Prezamos por brinquedos seguros e que desenvolvam as capacidades motoras e psicológicas dos baixinhos! 
+				</p>
+			</div>
+
+			<div class = "col-sm-6 text-center">
+				<img src="/public/img/img1.png" width ="600">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div>
 	<div class="container-fluid">
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
@@ -94,6 +113,80 @@
 				<p class="pontos"></p>
 			</div>
 		</div>
+
+		<div class="page">
+			<div class = "container-fluid">
+				<div class = "row">
+					<div class="col-sm-6 text-center">	
+						<div class="time middle">
+							<span>
+								<div id="d">0</div>
+								Days
+							</span>
+							<span>
+								<div id="h">0</div>
+								Hours
+							</span>
+							<span>
+								<div id="m">0</div>
+								Minutes
+							</span>
+							<span>
+								<div id="s">0</div>
+								Seconds
+							</span>
+						</div>
+						<p class="imgnatal"><img src="/public/img/img2.png"width="500"></p>
+					</div>
+
+					<div class="col-sm-6">
+						<div class="espaconatal">
+							<h4 class="tpromocao">Aproveite a nossa <span class="corrosa"><i>PROMOÇÃO DE NATAL!</i></span></h4>
+							<h2 class="corlaranja tpromocao">É por tempo limitado!</h2>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+								standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make 
+								a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+								remaining essentially unchanged.
+							</p>
+							<a style="text-decoration:none" class="botao2" href="/produtos">OBTER OFERTA</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var commingdate = new Date("Dec 25, 2021, 00:00:00")
+			var d = document.getElementById('d');
+			var h = document.getElementById('h');
+			var m = document.getElementById('m');
+			var s = document.getElementById('s');
+
+			var x = setInterval(function(){
+				var now = new Date();
+				var des = commingdate.getTime() - now.getTime();
+				var days = Math.floor(des/(1000 * 60 * 60 * 24));
+				var hours = Math.floor(des%(1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+				var mins = Math.floor(des%(1000 * 60 * 60) / (1000 * 60));
+				var secs = Math.floor(des%(1000 * 60) / 1000);
+
+				d.innerHTML = getTrueNumber(days);
+				h.innerHTML = getTrueNumber(hours);
+				m.innerHTML = getTrueNumber(mins);
+				s.innerHTML = getTrueNumber(secs);
+		
+				if(des <= 0) clearInterval(x);
+
+			}, 1000)
+
+			function getTrueNumber(x){
+				if ( x < 10) return '0'+x;
+				else return x;
+			}
+		</script>
+	
+
 
 		<div class="paddingfds">
 			<h3 class="topico">Os mais vendidos<img src="/public/img/4.png" width="300"></h3>

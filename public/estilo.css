@@ -114,7 +114,59 @@ header{
     background-color: #fff8d6;
 }
 
+.titulom{
+    font-family: 'Comfortaa', cursive;
+    color: #FE848F;
+    font-weight: 800;
+}
 
+.pm{
+    font-family: 'Comfortaa', cursive;
+    max-width: 600px;
+    font-weight: 500;
+}
+
+.linha{
+    border-color:#f7226a;
+    border-width: 2px;
+    max-width: 50px;
+    margin: 15px auto 15px 0px;
+}
+
+.pag1{
+    padding: 110px 0px;
+}
+
+.espacom{
+    padding: 50px;
+    max-width: 1300px;
+}
+
+.imgnatal{
+    padding: 10px 0 0 0;
+}
+
+.espaconatal{
+    padding: 20px 0;
+}
+
+.botao2{
+    padding: 10px 20px;
+    background-color: #FFB8A7;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-size:14px;
+    font-weight: bold;
+}
+
+.tpromocao{
+    padding: 10px 0;
+}
+
+.corrosa{
+    color: #FE848F;
+}
 
 #toggle{
     position:absolute;
@@ -231,7 +283,7 @@ header{
     }
 }
 
-
+/* animação - coração */
 .inteiro{
     padding: 100px 0 0 0;
     margin: 0;
@@ -403,3 +455,39 @@ header{
     color: #f67551;
     padding: 50px 0 10px 0;
 }
+
+/* time */
+.page{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Comfortaa', cursive;
+    padding: 50px 0px;
+    max-width: 1300px;
+}
+
+.time{
+    color: #f7226a;
+    text-transform: uppercase;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.middle{
+    text-align: center;
+}
+
+.time span{
+    padding: 0 14px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.time span div{
+    font-size: 40px;
+}
+
+.newsletter{
+    width: 90%;
+}
+
