@@ -215,7 +215,6 @@ header{
 #navbar{
     position: relative;
     height: 60px;
-    right: 60px;
     background: #fff;
     transition: 0.5s;
     width: 0px;
